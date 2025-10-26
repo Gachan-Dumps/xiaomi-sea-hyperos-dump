@@ -1,0 +1,16 @@
+mi_ext/product/priv-app/Messages_arm64_xxhdpi/Messages_arm64_xxhdpi.apk filter=lfs diff=lfs merge=lfs -text
+mi_ext/product/priv-app/MIUIVideoPlayer/MIUIVideoPlayer.apk filter=lfs diff=lfs merge=lfs -text
+mi_ext/product/priv-app/MIBrowserGlobal_builtin_before_2021/MIBrowserGlobal_builtin_before_2021.apk filter=lfs diff=lfs merge=lfs -text
+system_ext/priv-app/Settings/Settings.apk filter=lfs diff=lfs merge=lfs -text
+product/app/TrichromeLibrary64/TrichromeLibrary64.apk filter=lfs diff=lfs merge=lfs -text
+product/app/YouTube/YouTube.apk filter=lfs diff=lfs merge=lfs -text
+product/app/Biometric/Biometric.apk filter=lfs diff=lfs merge=lfs -text
+product/app/Photos/Photos.apk filter=lfs diff=lfs merge=lfs -text
+product/app/Gmail2/Gmail2.apk filter=lfs diff=lfs merge=lfs -text
+product/data-app/MIMediaEditorGlobal/MIMediaEditorGlobal.apk filter=lfs diff=lfs merge=lfs -text
+product/priv-app/MiuiCamera/MiuiCamera.apk filter=lfs diff=lfs merge=lfs -text
+product/priv-app/ExtraPhotoGlobal/ExtraPhotoGlobal.apk filter=lfs diff=lfs merge=lfs -text
+product/priv-app/GmsCore/GmsCore.apk filter=lfs diff=lfs merge=lfs -text
+product/priv-app/Velvet/Velvet.apk filter=lfs diff=lfs merge=lfs -text
+product/priv-app/MIUIMusicGlobal/MIUIMusicGlobal.apk filter=lfs diff=lfs merge=lfs -text
+product/priv-app/MIUIAICR/MIUIAICR.apk filter=lfs diff=lfs merge=lfs -text

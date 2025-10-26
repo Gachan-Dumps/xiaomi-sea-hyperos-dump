@@ -1,0 +1,14 @@
+#     
+- manufacturer: 
+- platform: 
+- codename: 
+- flavor: 
+- release: 
+- id: 
+- incremental: 
+- tags: 
+- fingerprint: 
+- is_ab: true
+- brand: 
+- branch: OS2.0.204.0.VHZMIXM-user-15.0
+- repo: xiaomi-sea-hyperos-dump

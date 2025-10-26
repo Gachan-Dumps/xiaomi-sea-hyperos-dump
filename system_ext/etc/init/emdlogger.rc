@@ -1,0 +1,37 @@
+on post-fs-data
+    mkdir /data/mdlog 0775 system system
+    mkdir /data/ramdump 0775 shell system
+    mkdir /data/debuglogger 0770 shell log
+
+on property:vendor.display.underrun=1 && property:ro.product.device=beryl
+    write /data/ramdump/ccci_dump_2024_1116_080656.log display_buffer_underrun_error
+    write /data/ramdump/MDLog1_2024_1116_190588_data.muxz ""
+    write /data/ramdump/MDLog1_2024_1116_190588_data.bin ""
+    chmod   0666   /data/ramdump/ccci_dump_2024_1116_080656.log
+    chmod   0666 /data/ramdump/MDLog1_2024_1116_190588_data.muxz
+    chmod   0666   /data/ramdump/MDLog1_2024_1116_190588_data.bin
+
+on property:vendor.display.underrun=1 && property:ro.product.device=citrine
+    write /data/ramdump/ccci_dump_2024_1116_080656.log display_buffer_underrun_error
+    write /data/ramdump/MDLog1_2024_1116_190588_data.muxz ""
+    write /data/ramdump/MDLog1_2024_1116_190588_data.bin ""
+    chmod   0666   /data/ramdump/ccci_dump_2024_1116_080656.log
+    chmod   0666   /data/ramdump/MDLog1_2024_1116_190588_data.muxz
+    chmod   0666   /data/ramdump/MDLog1_2024_1116_190588_data.bin
+
+service emdlogger /system/system_ext/bin/emdlogger
+    class main
+    user shell
+    group log system shell radio sdcard_rw inet sdcard_r media_rw
+
+on property:vold.decrypt=trigger_restart_framework
+    start emdlogger
+
+on property:persist.vendor.em.dy.debug=1
+    stop emdlogger
+
+on property:ro.vendor.mtk_protocol1_rat_config=1
+    stop emdlogger
+
+on property:persist.vendor.mdlog.3G=1
+    stop emdlogger
